@@ -55,7 +55,7 @@ SELECT wallets.ledger_location AS country, transfers.kind AS transfer_kind,
 SUM(transfers.send_amount_scalar) AS volume
 FROM transfers, wallets
 WHERE transfers.when_created > CURRENT_DATE - INTERVAL '7 days'
-group by ledger_location, kind
+group by ledger_location, kind;
 /* This command builds a 'send volume by country and kind' table and is grouped by country and kind.
  The country information is obtained from the 'ledger_location' from the wallets table */
 
@@ -74,6 +74,6 @@ SELECT transfers.source_wallet_id, SUM(transfers.send_amount_scalar) AS total_am
 FROM transfers WHERE send_amount_currency = 'CFA'
 AND (transfers.when_created > (now() - INTERVAL '10 month'))
 GROUP BY transfers.source_wallet_id
-HAVING SUM(transfers.send_amount_scalar) > 10000000
+HAVING SUM(transfers.send_amount_scalar) > 10000000;
 /* Grouping the send_amount_scalar by their sum while specifying the CFA currency generates
 the total amount sent, and indicates the wallets that have sent more than 10000000 CFA */
