@@ -72,7 +72,7 @@ add transaction counts and number of unique senders*/
 --Question 10
 SELECT transfers.source_wallet_id, SUM(transfers.send_amount_scalar) AS total_amount_sent
 FROM transfers WHERE send_amount_currency = 'CFA'
-AND (transfers.when_created > (now() - INTERVAL '10 month'))
+AND (transfers.when_created > (now() - INTERVAL '1 month'))
 GROUP BY transfers.source_wallet_id
 HAVING SUM(transfers.send_amount_scalar) > 10000000;
 /* Grouping the send_amount_scalar by their sum while specifying the CFA currency generates
