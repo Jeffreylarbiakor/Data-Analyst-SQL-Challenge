@@ -50,3 +50,4 @@ down by country and transfer kind).
 * 10. Finally, which wallets have sent more than 10,000,000 CFA in transfers in the last month
 (as identified by the source_wallet_id column on the transfers table), and how much did
 they send?
+
