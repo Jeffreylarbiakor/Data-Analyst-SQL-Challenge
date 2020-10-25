@@ -57,6 +57,7 @@ they send?
 -- A simplified version of some of the tables in our postgres db
 schema.
 -- Don't worry if you don't need to use all of the columns!
+<br>
 CREATE TABLE users (
 u_id integer PRIMARY KEY,
 name text NOT NULL,
@@ -65,6 +66,7 @@ wallet_id integer NOT NULL,
 when_created timestamp without time zone NOT NULL
 -- more stuff :)
 );
+<br>
 CREATE TABLE transfers (
 transfer_id integer PRIMARY KEY,
 u_id integer NOT NULL,
