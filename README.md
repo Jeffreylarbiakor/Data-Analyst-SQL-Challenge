@@ -58,7 +58,7 @@ they send?
 schema.
 -- Don't worry if you don't need to use all of the columns!
 
->CREATE TABLE users (
+* CREATE TABLE users (
 u_id integer PRIMARY KEY,
 name text NOT NULL,
 mobile text NOT NULL,
@@ -67,7 +67,7 @@ when_created timestamp without time zone NOT NULL
 -- more stuff :)
 );
 
->CREATE TABLE transfers (
+* CREATE TABLE transfers (
 transfer_id integer PRIMARY KEY,
 u_id integer NOT NULL,
 source_wallet_id integer NOT NULL,
@@ -83,7 +83,7 @@ when_created timestamp without time zone NOT NULL
 -- more stuff :)
 );
 
->CREATE TABLE agents (
+* CREATE TABLE agents (
 agent_id integer PRIMARY KEY,name text,
 country text NOT NULL,
 region text,
@@ -93,7 +93,7 @@ when_created timestamp without time zone NOT NULL
 -- more stuff :)
 );
 
->CREATE TABLE agent_transactions (
+* CREATE TABLE agent_transactions (
 atx_id integer PRIMARY KEY,
 u_id integer NOT NULL,
 agent_id integer NOT NULL,
@@ -103,7 +103,7 @@ when_created timestamp without time zone NOT NULL
 -- more stuff :)
 );
 
->CREATE TABLE wallets (
+* CREATE TABLE wallets (
 wallet_id integer PRIMARY KEY,
 currency text NOT NULL,
 ledger_location text NOT NULL,
