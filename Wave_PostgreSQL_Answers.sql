@@ -31,7 +31,7 @@ then 'withdrawer' else 'depositer' END AS agent_status, COUNT(*) FROM agent_tran
 WHERE agent_transactions.when_created  BETWEEN (now()  - '7 days'::INTERVAL) AND now();
 /* This is a very complex one. The goal is to present a count of how many Wave agents
 were “net depositors” vs. “net withdrawers" */
-
+ 
 --Question 6
 CREATE TABLE atx_volume_city_summary AS
 SELECT agents.city, COUNT(atx_id) AS atx_volume FROM agent_transactions
