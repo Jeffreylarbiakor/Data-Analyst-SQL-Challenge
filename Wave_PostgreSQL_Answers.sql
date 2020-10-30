@@ -48,7 +48,7 @@ WHERE agent_transactions.when_created > current_date -INTERVAL '7 days'
 GROUP BY country, city;
 /* This modified command of the atx_volume_city_summary table now separates the atx volume
 by country as well. The columns are now country, city and atx_volume */
-
+ 
 --Question 8
 CREATE TABLE send_volume_by_country_and_kind AS
 SELECT wallets.ledger_location AS country, transfers.kind AS transfer_kind,
