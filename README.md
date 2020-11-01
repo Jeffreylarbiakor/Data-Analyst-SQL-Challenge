@@ -1,5 +1,5 @@
 # Data Analyst SQL Challenge
- 
+
 ![Project Image](https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQQ1Jd5C_DPrn1nMsZ0laigZJhLNn7BFBC1Vg&usqp=CAU)
 
 ---
