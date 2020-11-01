@@ -9,7 +9,7 @@ SELECT COUNT(transfer_id) FROM transfers
 WHERE send_amount_currency = 'CFA';
 /* This command will return the number of transfers that have
 been sent in the currency CFA */
-
+ 
 --Question 3
 SELECT DISTINCT COUNT(u_id) FROM transfers
 WHERE send_amount_currency = 'CFA';
