@@ -15,7 +15,7 @@ SELECT DISTINCT COUNT(u_id) FROM transfers
 WHERE send_amount_currency = 'CFA';
 /* This distinct count function returns only the users
 that have sent a transfer in CFA currency */
-
+ 
 --Question 4
 SELECT TO_CHAR( TO_DATE( EXTRACT(month FROM when_created):: TEXT, 'MM'), 'Month') AS Months,
 COUNT(atx_id) FROM agent_transactions WHERE EXTRACT(year FROM when_created) = 2018
