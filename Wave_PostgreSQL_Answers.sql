@@ -58,7 +58,7 @@ WHERE transfers.when_created > CURRENT_DATE - INTERVAL '7 days'
 group by ledger_location, kind;
 /* This command builds a 'send volume by country and kind' table and is grouped by country and kind.
  The country information is obtained from the 'ledger_location' from the wallets table */
-
+ 
 --Question 9
 SELECT SUM(transfers.send_amount_scalar) AS volume, wallets.ledger_location AS country,
 transfers.kind AS transfer_kind,
