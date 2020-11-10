@@ -1,22 +1,22 @@
 /* SQL QUERIES FOR DATA ANALYST SQL CHALLENGE */
  
---Question 1
+--Query 1
 SELECT COUNT(*) FROM users;
 /* This command returns the number of users wave has */ 
 
---Question 2
+--Query 2 
 SELECT COUNT(transfer_id) FROM transfers
 WHERE send_amount_currency = 'CFA';
 /* This command will return the number of transfers that have
 been sent in the currency CFA */
  
---Question 3
+--Query 3
 SELECT DISTINCT COUNT(u_id) FROM transfers
 WHERE send_amount_currency = 'CFA';
 /* This distinct count function returns only the users
 that have sent a transfer in CFA currency */
  
---Question 4
+--Query 4
 SELECT TO_CHAR( TO_DATE( EXTRACT(month FROM when_created):: TEXT, 'MM'), 'Month') AS Months,
 COUNT(atx_id) FROM agent_transactions WHERE EXTRACT(year FROM when_created) = 2018
 GROUP BY EXTRACT(month FROM when_created);
