@@ -69,7 +69,7 @@ GROUP BY ledger_location, kind, u_id,transfer_id;
 /* Here, I modify the send_volume_by_country_and_kind table columns in order to
 add transaction counts and number of unique senders*/
  
---Question 10
+--Query 10
 SELECT transfers.source_wallet_id, SUM(transfers.send_amount_scalar) AS total_amount_sent
 FROM transfers WHERE send_amount_currency = 'CFA'
 AND (transfers.when_created > (now() - INTERVAL '1 month'))
