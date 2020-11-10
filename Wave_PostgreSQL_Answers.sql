@@ -77,3 +77,4 @@ GROUP BY transfers.source_wallet_id
 HAVING SUM(transfers.send_amount_scalar) > 10000000;
 /* Grouping the send_amount_scalar by their sum while specifying the CFA currency generates
 the total amount sent, and indicates the wallets that have sent more than 10000000 CFA */
+
