@@ -23,7 +23,7 @@ GROUP BY EXTRACT(month FROM when_created);
 /* In order to obtain the breakdown of the number of agent_transactions in 2018 by months,
 the TO_CHAR function will convert the numeric month values to string values */
 
---Question 5
+--Query 5
 SELECT SUM(case when amount > 0 THEN amount ELSE 0 END) AS withdrawal,
 SUM(CASE WHEN amount < 0 then amount ELSE 0 END) AS deposit,
 CASE WHEN ((sum(case when amount > 0 THEN amount else 0 END)) > ((sum(case when amount < 0 then amount else 0 END))) * -1)
@@ -32,7 +32,7 @@ WHERE agent_transactions.when_created  BETWEEN (now()  - '7 days'::INTERVAL) AND
 /* This is a very complex one. The goal is to present a count of how many Wave agents
 were “net depositors” vs. “net withdrawers" */
  
---Question 6
+--Query 6
 CREATE TABLE atx_volume_city_summary AS
 SELECT agents.city, COUNT(atx_id) AS atx_volume FROM agent_transactions
 INNER JOIN agents ON agents.agent_id = agent_transactions.agent_id
@@ -41,7 +41,7 @@ GROUP BY city;
 /* I built the atx_volume_city_summary table by using the CREAT VIEW function,
 thereby obtaining city and volume columns */
 
---Question 7
+--Query 7
 SELECT agents.country, agents.city, COUNT(atx_id) AS atx_volume FROM agent_transactions
 INNER JOIN agents ON agents.agent_id = agent_transactions.agent_id
 WHERE agent_transactions.when_created > current_date -INTERVAL '7 days'
@@ -49,7 +49,7 @@ GROUP BY country, city;
 /* This modified command of the atx_volume_city_summary table now separates the atx volume
 by country as well. The columns are now country, city and atx_volume */
  
---Question 8
+--Query 8
 CREATE TABLE send_volume_by_country_and_kind AS
 SELECT wallets.ledger_location AS country, transfers.kind AS transfer_kind,
 SUM(transfers.send_amount_scalar) AS volume
@@ -59,7 +59,7 @@ group by ledger_location, kind;
 /* This command builds a 'send volume by country and kind' table and is grouped by country and kind.
  The country information is obtained from the 'ledger_location' from the wallets table */
  
---Question 9
+--Query 9
 SELECT SUM(transfers.send_amount_scalar) AS volume, wallets.ledger_location AS country,
 transfers.kind AS transfer_kind,
 COUNT(transfers.transfer_id) AS transaction_count,
