@@ -11,7 +11,7 @@ For each question, please write a SQL query that would answer it (you can assume
 recent version of PostgreSQL, although the exact version shouldn’t matter). And if you’d like,
 feel free to also include any notes or comments you have about the question if it would help us
 understand your thought process!
-
+ 
 * 1. How many users does Wave have?
 * 2. How many transfers have been sent in the currency CFA? A transfer in Wave is when a
 user (denoted by their user id in the u_id column) sends money from their Wave account
