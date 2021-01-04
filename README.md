@@ -66,7 +66,7 @@ wallet_id integer NOT NULL,
 when_created timestamp without time zone NOT NULL
 -- more stuff :)
 );
-
+ 
 * CREATE TABLE transfers (
 transfer_id integer PRIMARY KEY,
 u_id integer NOT NULL,
