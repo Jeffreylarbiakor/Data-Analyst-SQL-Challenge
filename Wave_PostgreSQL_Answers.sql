@@ -1,5 +1,5 @@
 /* SQL QUERIES FOR DATA ANALYST SQL CHALLENGE */
-
+ 
 --Query 1
 SELECT COUNT(*) FROM users;
 /* This command returns the number of users wave has */ 
