@@ -1,7 +1,7 @@
 # Data Analyst SQL Challenge
  
 ![Project Image](https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQQ1Jd5C_DPrn1nMsZ0laigZJhLNn7BFBC1Vg&usqp=CAU)
- 
+
 ---
 
 In this challenge, I'd write SQL queries to answer some questions about Wave’s business. The PostgreSQL schema below is a
