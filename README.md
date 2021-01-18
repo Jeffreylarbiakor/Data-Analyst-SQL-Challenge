@@ -55,8 +55,7 @@ they send?
 
 ## PostgreSQL Database
 -- A simplified version of some of the tables in our postgres db schema.
--- A simplified version of some of the tables in our postgres db
-schema.
+
 -- Don't worry if you don't need to use all of the columns!
 
 * CREATE TABLE users (
