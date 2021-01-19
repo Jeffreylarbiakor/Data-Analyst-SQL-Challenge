@@ -4,9 +4,10 @@
 SELECT COUNT(*) FROM users;
 /* This command returns the number of users wave has */ 
 
---Query 2 
+--Query 2
 SELECT COUNT(transfer_id) FROM transfers
 WHERE send_amount_currency = 'CFA';
+--
 /* This command will return the number of transfers that have
 been sent in the currency CFA */
  
