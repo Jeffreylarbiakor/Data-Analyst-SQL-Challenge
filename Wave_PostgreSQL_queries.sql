@@ -3,9 +3,6 @@
 --Query 1
 SELECT COUNT(*) FROM users;
 /* This command returns the number of users wave has */
---Query 1
-SELECT COUNT(*) FROM users;
-/* This command returns the number of users wave has */ 
 
 --Query 2
 SELECT COUNT(transfer_id) FROM transfers
